@@ -1,0 +1,4 @@
+github.com/proxypoke/i3ipc v0.0.0-20140226181235-de8f6bb6b583 h1:SoPTLDFPiGcP97df0i8lVsDlwzCBYB+FVHTTT9WkfEs=
+github.com/proxypoke/i3ipc v0.0.0-20140226181235-de8f6bb6b583/go.mod h1:osm21jBHlrL0/wFQUlzdXrtd0NofK3Eya280Ci5A5xA=
+github.com/vbrown608/xdo-go v0.0.0-20180513204245-89fff994b14f h1:WL7dGTbmsBSolhmoQZDwaMaR6xd/HUUIwgp7kgwD8X8=
+github.com/vbrown608/xdo-go v0.0.0-20180513204245-89fff994b14f/go.mod h1:XXTSzBQu9YNXzZOqlW2Jj21royPzMdh4BtCcRv54M2A=

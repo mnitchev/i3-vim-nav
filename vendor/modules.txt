@@ -1,0 +1,6 @@
+# github.com/proxypoke/i3ipc v0.0.0-20140226181235-de8f6bb6b583
+## explicit
+github.com/proxypoke/i3ipc
+# github.com/vbrown608/xdo-go v0.0.0-20180513204245-89fff994b14f
+## explicit
+github.com/vbrown608/xdo-go
