@@ -1,40 +1,43 @@
-# i3-vim-nav
-Seamlessly change focus between i3 windows and Vim splits using the same hotkey.
+# i3-vim-tmux-nav
+Seamlessly change focus between i3 windows, Vim and Tmux splits using the same hotkey.
 
 # Installation
 
 ## Dependencies
 
 This depends on you having a couple packages installed. Most notably, `xdotool/libxdo`, the second of which should be installed as a dependency of the first. If you want to build the binary from source and you're on Fedora, you'll also need the `libxdo-devel` package. We also currently require you to be using a version of vim with either python or python3 support.
+To get seamless switching between vim and tmux you need the [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator).
 
 ## Vim plugin
 
-First, install the Vim plugin.
- 
+First, install the Vim plugin. The `vim-tmux-navigator` plugin already maps `<C-hjkl>` to switch between vim and tmux splits. In addition to this we have to add `<M-hjkl>` to switch between vim and i3. These mappings won't be used directly, but will rather be called by the the binary installed in the next step. **This may however interfere with mappings that you may already have in your vim config!**
+  
 ### Using vim-plug
 In your .vimrc (vim) or .config/nvim/init.vim (neovim):
 
 ```vim
 Plug 'termhn/i3-vim-nav'
+Pluig 'christoomey/vim-tmux-navigator'
 	
 " i3 integration
-nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
-nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
-nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
-nnoremap <silent> <c-j> :call Focus('down', 'j')<CR>
+nnoremap <silent> <M-l> :call Focus('right', 'l')<CR>
+nnoremap <silent> <M-h> :call Focus('left', 'h')<CR>
+nnoremap <silent> <M-k> :call Focus('up', 'k')<CR>
+nnoremap <silent> <M-j> :call Focus('down', 'j')<CR>
 ```
 	
 ### Using Pathogen
 1. cd ~/.vim/bundle
-2. git clone https://github.com/termhn/i3-vim-nav
-3. add the following to your .vimrc
+1. git clone https://github.com/termhn/i3-vim-nav
+1. git clone https://github.com/christoomey/vim-tmux-navigator.git
+1. add the following to your .vimrc
 
 ```vim
 " i3 integration
-nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
-nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
-nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
-nnoremap <silent> <c-j> :call Focus('down', 'j')<CR>
+nnoremap <silent> <M-l> :call Focus('right', 'l')<CR>
+nnoremap <silent> <M-h> :call Focus('left', 'h')<CR>
+nnoremap <silent> <M-k> :call Focus('up', 'k')<CR>
+nnoremap <silent> <M-j> :call Focus('down', 'j')<CR>
 ```
 	
 ## Binary
