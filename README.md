@@ -11,21 +11,21 @@ To get seamless switching between vim and tmux you need the [vim-tmux-navigator]
 ## Vim plugin
 
 First, install the Vim plugin. The `vim-tmux-navigator` plugin already maps `<C-hjkl>` to switch between vim and tmux splits. In addition to this we have to add `<M-hjkl>` to switch between vim and i3. These mappings won't be used directly, but will rather be called by the the binary installed in the next step. **This may however interfere with mappings that you may already have in your vim config!**
-  
+
 ### Using vim-plug
 In your .vimrc (vim) or .config/nvim/init.vim (neovim):
 
 ```vim
 Plug 'termhn/i3-vim-nav'
 Pluig 'christoomey/vim-tmux-navigator'
-	
+
 " i3 integration
 nnoremap <silent> <M-l> :call Focus('right', 'l')<CR>
 nnoremap <silent> <M-h> :call Focus('left', 'h')<CR>
 nnoremap <silent> <M-k> :call Focus('up', 'k')<CR>
 nnoremap <silent> <M-j> :call Focus('down', 'j')<CR>
 ```
-	
+
 ### Using Pathogen
 1. cd ~/.vim/bundle
 1. git clone https://github.com/termhn/i3-vim-nav
@@ -39,13 +39,13 @@ nnoremap <silent> <M-h> :call Focus('left', 'h')<CR>
 nnoremap <silent> <M-k> :call Focus('up', 'k')<CR>
 nnoremap <silent> <M-j> :call Focus('down', 'j')<CR>
 ```
-	
+
 ## Binary
 
 Next, install the binary on your PATH. If you have go installed, this can be done simply by
 
 ```
-go get -u github.com/termhn/i3-vim-nav
+go get -u github.com/mnitchev/i3-vim-tmux-nav
 ```
 If not, you can symlink the binary from its downloaded directory (this changes based on which plugin manager you used and if you're using vim or neovim) into /usr/local/bin. For example, if you used Pathogen on default Vim, this would be:
 
