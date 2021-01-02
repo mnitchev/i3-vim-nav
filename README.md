@@ -47,19 +47,16 @@ Next, install the binary on your PATH. If you have go installed, this can be don
 ```
 go get -u github.com/mnitchev/i3-vim-tmux-nav
 ```
-If not, you can symlink the binary from its downloaded directory (this changes based on which plugin manager you used and if you're using vim or neovim) into /usr/local/bin. For example, if you used Pathogen on default Vim, this would be:
-
-```
-ln -s ~/.vim/bundle/i3-vim-nav/i3-vim-nav /usr/local/bin
-```
+If not, simply donwload [the latest release]() and put it in PATH.
+**NOTE:** make sure it's in the PATH set in `~/.profile`.
 
 Then, in your i3 config (adjust the path to the executable as necessary if you installed it differently). Feel free to change the key bind as you please.
 
 ```
-bindsym --release $mod+h exec --no-startup-id "i3-vim-nav h"
-bindsym --release $mod+j exec --no-startup-id "i3-vim-nav j"
-bindsym --release $mod+k exec --no-startup-id "i3-vim-nav k"
-bindsym --release $mod+l exec --no-startup-id "i3-vim-nav l"
+bindsym --release Control+h exec --no-startup-id "i3-vim-tmux-nav h"
+bindsym --release Control+j exec --no-startup-id "i3-vim-tmux-nav j"
+bindsym --release Control+k exec --no-startup-id "i3-vim-tmux-nav k"
+bindsym --release Control+l exec --no-startup-id "i3-vim-tmux-nav l"
 ```
 
 Note: I've gotten a bug where in some installations of i3, it seems to not respect user $PATH additions, even though it seems to recognize them in the variable. If it doesn't work when placed in a user $PATH directory, try hard-coding the path to the binary in the exec commands.
